@@ -67,7 +67,7 @@ namespace Solutions.Tests.Helpers
         [InlineData(5, 5)]
         [InlineData(100, 97)]
         [InlineData(100005, 100003)]
-        [InlineData(100003, 100003)]g
+        [InlineData(100003, 100003)]
         public void GetPrimeNumbersUpToN(int numberLimit, int expectedLastPrime)
         {
             var primes = _primeNumbers.GetPrimeNumbersUpToN(numberLimit);
