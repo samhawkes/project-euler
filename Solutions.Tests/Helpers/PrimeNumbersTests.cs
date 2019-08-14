@@ -63,6 +63,8 @@ namespace Solutions.Tests.Helpers
         }
 
         [Theory]
+        [InlineData(3, 3)]
+        [InlineData(2, 2)]
         [InlineData(4, 3)]
         [InlineData(5, 5)]
         [InlineData(100, 97)]

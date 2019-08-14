@@ -11,7 +11,7 @@ namespace Solutions.Helpers
         public IEnumerable<int> GetPrimeNumbersUpToN(int numberLimit)
         {
             if (_primeNumbers.Last() >= numberLimit)
-                return _primeNumbers.Where(x => _primeNumbers[x] <= numberLimit);
+                return _primeNumbers.Where(x => x <= numberLimit);
 
             while (_primeNumbers.Last() < numberLimit)
             {
