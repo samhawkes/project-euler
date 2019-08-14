@@ -61,5 +61,18 @@ namespace Solutions.Tests.Helpers
             
             Assert.True(primes.Count().Equals(numberOfPrimes));
         }
+
+        [Theory]
+        [InlineData(4, 3)]
+        [InlineData(5, 5)]
+        [InlineData(100, 97)]
+        [InlineData(100005, 100003)]
+        [InlineData(100003, 100003)]g
+        public void GetPrimeNumbersUpToN(int numberLimit, int expectedLastPrime)
+        {
+            var primes = _primeNumbers.GetPrimeNumbersUpToN(numberLimit);
+            
+            Assert.True(primes.Last().Equals(expectedLastPrime), $"Last Prime = {primes.Last()}. Expected Last = {expectedLastPrime}");
+        }
     }
 }

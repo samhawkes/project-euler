@@ -10,10 +10,18 @@ namespace Solutions.Helpers
 
         public IEnumerable<int> GetPrimeNumbersUpToN(int numberLimit)
         {
-            if (_primeNumbers.Last() > numberLimit)
-                return _primeNumbers;
+            if (_primeNumbers.Last() >= numberLimit)
+                return _primeNumbers.Where(x => _primeNumbers[x] <= numberLimit);
 
-            return null;
+            while (_primeNumbers.Last() < numberLimit)
+            {
+                AddNextPrimeNumberToList();
+            }
+
+            if (_primeNumbers.Last() > numberLimit)
+                _primeNumbers.RemoveAt(_primeNumbers.Count - 1);
+            
+            return _primeNumbers;
         }
 
         public int GetTheNthPrimeNumber(int n)
