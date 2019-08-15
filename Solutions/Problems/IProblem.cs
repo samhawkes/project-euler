@@ -2,6 +2,6 @@ namespace Solutions
 {
     public interface IProblem
     {
-        int Run();
+        int Run(int? targetNumber);
     }
 }

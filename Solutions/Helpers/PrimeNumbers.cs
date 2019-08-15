@@ -6,9 +6,9 @@ namespace Solutions.Helpers
 {
     public class PrimeNumbers
     {
-        private readonly List<int> _primeNumbers = new List<int> {2, 3};
+        private readonly List<ulong> _primeNumbers = new List<ulong> {2, 3};
 
-        public IEnumerable<int> GetPrimeNumbersUpToN(int numberLimit)
+        public IEnumerable<ulong> GetPrimeNumbersUpToN(ulong numberLimit)
         {
             if (_primeNumbers.Last() >= numberLimit)
                 return _primeNumbers.Where(x => x <= numberLimit);
@@ -24,14 +24,14 @@ namespace Solutions.Helpers
             return _primeNumbers;
         }
 
-        public int GetTheNthPrimeNumber(int n)
+        public ulong GetTheNthPrimeNumber(int n)
         {
             var primes = GetNPrimeNumbers(n);
 
             return primes.ElementAt(n - 1);
         }
 
-        public IEnumerable<int> GetNPrimeNumbers(int howManyPrimes)
+        public IEnumerable<ulong> GetNPrimeNumbers(int howManyPrimes)
         {
             while (_primeNumbers.Count < howManyPrimes)
             {
@@ -43,20 +43,6 @@ namespace Solutions.Helpers
                 yield return _primeNumbers[i];
             }
         }
-        
-        public bool IsAPrimeNumber(int candidate)
-        {
-            if (candidate < 2)
-                return false;
-            
-            for (var divisor = 2; divisor <= Math.Sqrt(candidate); divisor++)
-            {
-                if (candidate % divisor == 0)
-                    return false;
-            }
-
-            return true;
-        }
 
         private void AddNextPrimeNumberToList()
         {
@@ -64,7 +50,7 @@ namespace Solutions.Helpers
 
             do
             {
-                var isPrime = IsAPrimeNumber(primeCandidate);
+                var isPrime = primeCandidate.IsAPrimeNumber();
 
                 if (isPrime)
                 {

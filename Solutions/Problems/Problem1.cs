@@ -1,14 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Solutions
 {
     public class Problem1 : IProblem
     {
-        public int Run()
+        public int Run(int? targetNumber)
         {
+            var multiples = new List<int>();
             
-            
-            return 0;
+            for (var i = 0; i < targetNumber; i++)
+            {
+                if (i % 3 == 0 || i % 5 == 0)
+                    multiples.Add(i);
+            }
+
+            return multiples.Sum();
         }
     }
 }
