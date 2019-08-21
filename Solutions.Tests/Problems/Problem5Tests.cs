@@ -14,10 +14,9 @@ namespace Solutions.Tests.Problems
         [Theory]
         [InlineData(10, 2520)]
         [InlineData(20, 232792560)]
-        public void Problem1(ulong targetNumber, int expectedOutcome)
+        public void Problem5(ulong targetNumber, ulong expectedOutcome)
         {
-            var ans = _problem.Run(targetNumber);
-            Assert.True(ans.Equals(expectedOutcome), $"{ans}");
+            Assert.True(_problem.Run(targetNumber).Equals(expectedOutcome));
         }
     }
 }

@@ -2,16 +2,16 @@ namespace Solutions
 {
     public class Problem5 : IProblem
     {
-        public int Run(ulong targetNumber)
+        public ulong Run(ulong targetNumber)
         {
-            for (var i = 1; i > 0; i++)
+            for (ulong i = 1; i > 0; i++)
             {
-                for (var j = 1; j <= (int)targetNumber; j++)
+                for (ulong j = 1; j <= targetNumber; j++)
                 {
                     if (i % j != 0)
                         break;
 
-                    if (j == (int)targetNumber)
+                    if (j == targetNumber)
                         return i;
                 }
             }

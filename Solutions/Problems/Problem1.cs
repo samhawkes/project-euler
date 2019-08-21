@@ -6,7 +6,7 @@ namespace Solutions
 {
     public class Problem1 : IProblem
     {
-        public int Run(ulong targetNumber)
+        public ulong Run(ulong targetNumber)
         {
             var multiples = new List<int>();
             
@@ -16,7 +16,7 @@ namespace Solutions
                     multiples.Add(i);
             }
 
-            return multiples.Sum();
+            return (ulong)multiples.Sum();
         }
     }
 }

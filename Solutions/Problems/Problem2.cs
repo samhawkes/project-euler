@@ -6,13 +6,13 @@ namespace Solutions
 {
     public class Problem2 : IProblem
     {
-        public int Run(ulong targetNumber)
+        public ulong Run(ulong targetNumber)
         {
             var fibonacci = new FibonacciNumbers();
             
             var numbers = fibonacci.GetFibonacciNumbersUpToN(targetNumber);
 
-            return (int) numbers.Sum(num => num % 2d == 0d ? num : 0d);
+            return (ulong) numbers.Sum(num => num % 2d == 0d ? num : 0d);
         }
     }
 }
