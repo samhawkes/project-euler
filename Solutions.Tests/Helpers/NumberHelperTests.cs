@@ -75,5 +75,21 @@ namespace Solutions.Tests.Helpers
         {
             Assert.False(candidate.IsAPerfectSquare());
         }
+
+        [Theory]
+        [InlineData(3, 4, 5)]
+        [InlineData(33, 56, 65)]
+        public void IsAPythagoreanTriplet(ulong a, ulong b, ulong c)
+        {
+            Assert.True(NumberHelpers.IsAPythagoreanTriplet(a, b, c));
+        }
+        
+        [Theory]
+        [InlineData(2, 4, 5)]
+        [InlineData(32, 55, 66)]
+        public void IsNotAPythagoreanTriplet(ulong a, ulong b, ulong c)
+        {
+            Assert.False(NumberHelpers.IsAPythagoreanTriplet(a, b, c));
+        }S
     }
 }

@@ -31,5 +31,10 @@ namespace Solutions.Helpers
 
             return squareRoot * squareRoot == candidate;
         }
+
+        public static bool IsAPythagoreanTriplet(ulong a, ulong b, ulong c)
+        {
+            return (a * a) + (b * b) == (c * c);
+        }
     }
 }
