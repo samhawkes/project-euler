@@ -44,6 +44,18 @@ namespace Solutions.Helpers
             }
         }
 
+        public IEnumerable<ulong> GetPrimeFactors(ulong targetNumber)
+        {
+            var squareRoot = Math.Ceiling(Math.Sqrt(targetNumber));
+
+            while (_primeNumbers.Last() < squareRoot)
+            {
+                AddNextPrimeNumberToList();
+            }
+
+            return _primeNumbers.Where(primeNumber => targetNumber % primeNumber == 0);
+        }
+
         private void AddNextPrimeNumberToList()
         {
             var primeCandidate = _primeNumbers[_primeNumbers.Count - 1] + 2;

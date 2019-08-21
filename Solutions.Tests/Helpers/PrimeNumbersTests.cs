@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Solutions.Helpers;
 using Xunit;
@@ -51,5 +52,13 @@ namespace Solutions.Tests.Helpers
 
             Assert.True(primes.Last().Equals(expectedLastPrime));
         }
+
+        [Theory]
+        [InlineData(13195, new ulong[] {5, 7, 13, 29})]
+        public void GetPrimeFactors(ulong targetNumber, ulong[] expectedPrimeFactors)
+        {
+            Assert.Equal(_primeNumbers.GetPrimeFactors(targetNumber), expectedPrimeFactors);
+        }
+        
     }
 }

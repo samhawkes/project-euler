@@ -13,7 +13,7 @@ namespace Solutions.Tests.Problems
 
         [Theory]
         [InlineData(4000000, 4613732)]
-        public void Problem1(int targetNumber, int expectedOutcome)
+        public void Problem1(ulong targetNumber, int expectedOutcome)
         {
             Assert.True(_problem.Run(targetNumber).Equals(expectedOutcome));
         }

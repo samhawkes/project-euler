@@ -2,18 +2,17 @@ using Xunit;
 
 namespace Solutions.Tests.Problems
 {
-    public class Problem1Tests
+    public class Problem3Tests
     {
         private IProblem _problem;
 
-        public Problem1Tests()
+        public Problem3Tests()
         {
-            _problem = new Problem1();
+            _problem = new Problem3();
         }
-        
-        
+
         [Theory]
-        [InlineData(10, 23)]
+        [InlineData(600851475143, 6857)]
         public void Problem1(ulong targetNumber, int expectedOutcome)
         {
             Assert.True(_problem.Run(targetNumber).Equals(expectedOutcome));
