@@ -90,6 +90,6 @@ namespace Solutions.Tests.Helpers
         public void IsNotAPythagoreanTriplet(ulong a, ulong b, ulong c)
         {
             Assert.False(NumberHelpers.IsAPythagoreanTriplet(a, b, c));
-        }S
+        }
     }
 }
