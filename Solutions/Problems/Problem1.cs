@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Solutions
+namespace Solutions.Problems
 {
     public class Problem1 : IProblem
     {

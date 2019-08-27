@@ -1,8 +1,7 @@
-using System;
 using System.Linq;
 using Solutions.Helpers;
 
-namespace Solutions
+namespace Solutions.Problems
 {
     public class Problem2 : IProblem
     {

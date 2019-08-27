@@ -1,10 +1,11 @@
+using Solutions.Problems;
 using Xunit;
 
 namespace Solutions.Tests.Problems
 {
     public class Problem5Tests
     {
-        private IProblem _problem;
+        private readonly IProblem _problem;
 
         public Problem5Tests()
         {

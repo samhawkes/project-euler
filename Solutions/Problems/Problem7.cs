@@ -1,6 +1,6 @@
 using Solutions.Helpers;
 
-namespace Solutions
+namespace Solutions.Problems
 {
     public class Problem7 : IProblem
     {
