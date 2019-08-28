@@ -11,7 +11,7 @@ namespace Solutions.Problems
             
             var numbers = fibonacci.GetFibonacciNumbersUpToN(targetNumber);
 
-            return (ulong) numbers.Sum(num => num % 2d == 0d ? num : 0d);
+            return (ulong) numbers.Sum(num => num % 2 == 0 ? num : 0d);
         }
     }
 }
